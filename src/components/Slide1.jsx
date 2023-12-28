@@ -89,40 +89,41 @@ const Slide1 = () => {
 
   return (
     <div>
-      <div className="carousel w-full">
+      <div className="carousel w-full lg:hidden inline-flex">
         {items?.map((item) => (
-          <div
-            id={`${item?._id}`}
-            className="carousel-item relative w-full flex-col"
-          >
-            <img className="w-full h-96" src={item?.image} alt="Shoes" />
-            <div className="text-start flex flex-col space-y-1">
-              <div className="flex space-x-1">
-                {[1, 2, 3, 4, 5].map((rate) =>
-                  rate <= item?.rating ? (
-                    <FaStar className="text-yellow-600" />
-                  ) : (
-                    <CiStar className="text-base-200" />
-                  )
-                )}
-              </div>
-              <p>{item?.name}</p>
-              <p className="text-red-800 font-bold">${item?.price}</p>
-              <p>{item?.details}</p>
-              <div>
-                <button className="btn btn-sm">Add to cart</button>
+          <div id={`${item?._id}`} className="carousel-item relative w-full">
+            <div className="w-full">
+              <img className="w-full h-52" src={item?.image} alt={item?.name} />
+              <div className="text-start flex flex-col space-y-1">
+                <div className="flex space-x-1">
+                  {[1, 2, 3, 4, 5].map((rate) =>
+                    rate <= item?.rating ? (
+                      <FaStar className="text-yellow-600" />
+                    ) : (
+                      <CiStar className="text-base-200" />
+                    )
+                  )}
+                </div>
+                <p>{item?.name}</p>
+                <p className="text-red-800 font-bold">${item?.price}</p>
+                <p>{item?.details}</p>
+                <div>
+                  <button className="btn btn-sm btn-neutral">
+                    Add to cart
+                  </button>
+                </div>
               </div>
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href={`#${item?._id - 1}`}
-                className="btn btn-circle btn-sm bg-white hover:bg-orange-600 hover:text-white"
+                className="btn btn-circle btn-sm btn-neutral hover:bg-orange-600 hover:text-white"
               >
                 ❮
               </a>
               <a
                 href={`#${item?._id + 1}`}
-                className="btn btn-circle btn-sm bg-white hover:bg-orange-600 hover:text-white"
+                className="btn btn-circle btn-sm btn-neutral hover:bg-orange-600 hover:text-white"
               >
                 ❯
               </a>
@@ -183,7 +184,9 @@ const Slide1 = () => {
                     <p>{item?.details}</p>
                     {hoveredCard === item?._id && (
                       <div>
-                        <button className="btn btn-sm">Add to cart</button>
+                        <button className="btn btn-sm btn-neutral">
+                          Add to cart
+                        </button>
                       </div>
                     )}
                   </div>
@@ -193,13 +196,13 @@ const Slide1 = () => {
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a
               href="#slide2"
-              className="btn btn-circle btn-sm bg-white hover:bg-orange-600 hover:text-white"
+              className="btn btn-circle btn-sm bg-base-300 hover:bg-orange-600 shadow-xl hover:text-white"
             >
               ❮
             </a>
             <a
               href="#slide2"
-              className="btn btn-circle btn-sm bg-white hover:bg-orange-600 hover:text-white"
+              className="btn btn-circle btn-sm bg-base-300 hover:bg-orange-600 shadow-xl hover:text-white"
             >
               ❯
             </a>
@@ -257,7 +260,9 @@ const Slide1 = () => {
                     <p>{item?.details}</p>
                     {hoveredCard === item?._id && (
                       <div>
-                        <button className="btn btn-sm">Add to cart</button>
+                        <button className="btn btn-sm btn-neutral">
+                          Add to cart
+                        </button>
                       </div>
                     )}
                   </div>
@@ -267,14 +272,14 @@ const Slide1 = () => {
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a
               href="#slide1"
-              className="btn btn-circle btn-sm bg-white hover:bg-orange-600 hover:text-white"
+              className="btn btn-circle btn-sm bg-base-300 hover:bg-orange-600 shadow-xl hover:text-white"
             >
               ❮
             </a>
 
             <a
               href="#slide1"
-              className="btn btn-circle btn-sm bg-white hover:bg-orange-600 hover:text-white"
+              className="btn btn-circle btn-sm bg-base-300 hover:bg-orange-600 shadow-xl hover:text-white"
             >
               ❯
             </a>

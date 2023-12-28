@@ -16,20 +16,20 @@ const Slide2 = () => {
           <div
             onClick={() => setSlideNumber(3)}
             className={`bg-base-300 ${
-              slideNumber === 3 ? "w-10 bg-orange-600" : "w-3"
-            } h-3 cursor-pointer rounded-full hover:bg-orange-600`}
+              slideNumber === 3 ? "w-10 bg-orange-600" : "w-3 bg-gray-600"
+            } h-3 cursor-pointer rounded-full  hover:bg-orange-600`}
           ></div>
           <div
             onClick={() => setSlideNumber(6)}
             className={`bg-base-300 ${
-              slideNumber === 6 ? "w-10 bg-orange-600" : "w-3"
-            } h-3  cursor-pointer rounded-full hover:bg-orange-600`}
+              slideNumber === 6 ? "w-10 bg-orange-600" : "w-3 bg-gray-600"
+            } h-3  cursor-pointer rounded-full  hover:bg-orange-600`}
           ></div>
           <div
             onClick={() => setSlideNumber(9)}
             className={`bg-base-300 ${
-              slideNumber === 9 ? "w-10 bg-orange-600" : "w-3"
-            } h-3 cursor-pointer rounded-full hover:bg-orange-600`}
+              slideNumber === 9 ? "w-10 bg-orange-600" : "w-3 bg-gray-600"
+            } h-3 cursor-pointer rounded-full  hover:bg-orange-600`}
           ></div>
         </div>
       </div>
