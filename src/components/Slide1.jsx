@@ -93,7 +93,7 @@ const Slide1 = () => {
         {items?.map((item) => (
           <div id={`${item?._id}`} className="carousel-item relative w-full">
             <div className="flex flex-col">
-              <img className="w-full h-[50%]" src={item?.image} alt="Shoes" />
+              <img className="w-full" src={item?.image} alt="Shoes" />
               <div className="text-start flex flex-col space-y-1">
                 <div className="flex space-x-1">
                   {[1, 2, 3, 4, 5].map((rate) =>
