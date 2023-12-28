@@ -4,7 +4,7 @@ import Slide2 from "./components/Slide2";
 
 function App() {
   return (
-    <div className="flex flex-col space-y-2">
+    <div className="flex flex-col space-y-5">
       <Slide1 />
       <Slide2 />
     </div>

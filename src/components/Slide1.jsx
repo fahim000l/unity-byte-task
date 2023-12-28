@@ -89,27 +89,28 @@ const Slide1 = () => {
 
   return (
     <div>
-      <div className="carousel w-full lg:hidden flex">
+      <div className="carousel w-full">
         {items?.map((item) => (
-          <div id={`${item?._id}`} className="carousel-item relative w-full">
-            <div className="flex flex-col">
-              <img className="w-full" src={item?.image} alt="Shoes" />
-              <div className="text-start flex flex-col space-y-1">
-                <div className="flex space-x-1">
-                  {[1, 2, 3, 4, 5].map((rate) =>
-                    rate <= item?.rating ? (
-                      <FaStar className="text-yellow-600" />
-                    ) : (
-                      <CiStar className="text-base-200" />
-                    )
-                  )}
-                </div>
-                <p>{item?.name}</p>
-                <p className="text-red-800 font-bold">${item?.price}</p>
-                <p>{item?.details}</p>
-                <div>
-                  <button className="btn btn-sm">Add to cart</button>
-                </div>
+          <div
+            id={`${item?._id}`}
+            className="carousel-item relative w-full flex-col"
+          >
+            <img className="w-full h-96" src={item?.image} alt="Shoes" />
+            <div className="text-start flex flex-col space-y-1">
+              <div className="flex space-x-1">
+                {[1, 2, 3, 4, 5].map((rate) =>
+                  rate <= item?.rating ? (
+                    <FaStar className="text-yellow-600" />
+                  ) : (
+                    <CiStar className="text-base-200" />
+                  )
+                )}
+              </div>
+              <p>{item?.name}</p>
+              <p className="text-red-800 font-bold">${item?.price}</p>
+              <p>{item?.details}</p>
+              <div>
+                <button className="btn btn-sm">Add to cart</button>
               </div>
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -129,7 +130,7 @@ const Slide1 = () => {
           </div>
         ))}
       </div>
-      <div className="carousel w-full hidden lg:flex">
+      <div className="carousel w-full hidden lg:inline-flex">
         <div id="slide1" className="carousel-item relative w-full">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
             {items
